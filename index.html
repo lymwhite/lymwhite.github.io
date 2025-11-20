@@ -35,54 +35,53 @@
 <!DOCTYPE html>
 <html>
  <h3 class="w3-padding-16">Artist Package Options</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Individual</li>
-          <li class="w3-padding-16">Personalized Instruction</li>
-          <li class="w3-padding-16">In-Session Supplies</li>
-          <li class="w3-padding-16">Art Basics Introduction</li>
-          <li class="w3-padding-16">You Keep Your Artwork</li>
-          <li class="w3-padding-16">
-            <h2>$ 44</h2>
-            <span class="w3-opacity">per session</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Book Today</button>
-          </li>
+    <div class="package-grid">
+      <!-- Row 1: Package Types (smallest row) -->
+      <div class="package-header">Individual</div>
+      <div class="package-header">Group (2 - 3)</div>
+      <div class="package-header">Group (4 - 5)</div>
+      
+      <!-- Row 2: Package Details (largest/middle row) -->
+      <div class="package-details">
+        <ul>
+          <li>Personalized Instruction</li>
+          <li>In-Session Supplies</li>
+          <li>Art Basics Introduction</li>
+          <li>You Keep Your Artwork</li>
         </ul>
       </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-black w3-xlarge w3-padding-32">Group (2 - 3)</li>
-          <li class="w3-padding-16">Personalized Instruction</li>
-          <li class="w3-padding-16">In-Session Supplies</li>
-          <li class="w3-padding-16">Art Basics Introduction</li>
-          <li class="w3-padding-16">You Keep Your Painting</li>
-          <li class="w3-padding-16">
-            <h2>$ 68</h2>
-            <span class="w3-opacity">per session</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Book Today</button>
-          </li>
+      <div class="package-details">
+        <ul>
+          <li>Personalized Instruction</li>
+          <li>In-Session Supplies</li>
+          <li>Art Basics Introduction</li>
+          <li>You Keep Your Painting</li>
         </ul>
       </div>
-       <div class="w3-half">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Group (4 - 5)</li>
-          <li class="w3-padding-16">Personalized Instruction</li>
-          <li class="w3-padding-16">In-Session Supplies</li>
-          <li class="w3-padding-16">Art Basics Introduction</li>
-          <li class="w3-padding-16">You Keep Your Painting</li>
-          <li class="w3-padding-16">
-            <h2>$ 116</h2>
-            <span class="w3-opacity">per session</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Book Today</button>
-          </li>
+      <div class="package-details">
+        <ul>
+          <li>Personalized Instruction</li>
+          <li>In-Session Supplies</li>
+          <li>Art Basics Introduction</li>
+          <li>You Keep Your Painting</li>
         </ul>
       </div>
+      
+      <!-- Row 3: Price and Book Today (bottom row) -->
+      <div class="package-footer">
+        <h2>$ 44</h2>
+        <span class="price-label">per session</span>
+        <button class="book-button">Book Today</button>
+      </div>
+      <div class="package-footer">
+        <h2>$ 68</h2>
+        <span class="price-label">per session</span>
+        <button class="book-button">Book Today</button>
+      </div>
+      <div class="package-footer">
+        <h2>$ 116</h2>
+        <span class="price-label">per session</span>
+        <button class="book-button">Book Today</button>
+      </div>
+    </div>
 </html>

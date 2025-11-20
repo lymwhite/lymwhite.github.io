@@ -115,3 +115,101 @@ header p {
     color: #B6C5AC;
     transform: scale(1.05);
 }
+
+/* Package Grid Layout */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Package Header Row (smallest) */
+.package-header {
+    background-color: rgba(116, 129, 108, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    border: 2px solid white;
+}
+
+/* Package Details Row (largest/middle) */
+.package-details {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    min-height: 200px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.package-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.package-details ul li {
+    padding: 12px 0;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid rgba(116, 129, 108, 0.2);
+}
+
+.package-details ul li:last-child {
+    border-bottom: none;
+}
+
+/* Package Footer Row (bottom) */
+.package-footer {
+    background-color: rgba(182, 197, 172, 0.9);
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    border: 2px solid white;
+}
+
+.package-footer h2 {
+    margin: 10px 0 5px 0;
+    color: #333;
+    font-size: 32px;
+}
+
+.package-footer .price-label {
+    display: block;
+    color: #555;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.package-footer .book-button {
+    background-color: white;
+    color: #333;
+    border: 2px solid #74816C;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-family: 'helvetica neue', sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.package-footer .book-button:hover {
+    background-color: #74816C;
+    color: white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+}

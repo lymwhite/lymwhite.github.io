@@ -67,7 +67,12 @@ h2 {
     text-align: center;
 }
 
-header h1,
+header h1 {
+    color: white;
+    font-size: 128px;
+}
+
 header p {
     color: white;
+    font-size: 64px;
 }

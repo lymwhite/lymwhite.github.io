@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Me Warm</title>
     <link rel="stylesheet" href="STYLE.CSS">
+    <script src="INDEX.JS"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" onclick="toggleMenu()">
         <div class="bar top"></div>
         <div class="bar middle"></div>
         <div class="bar bottom"></div>
     </div>
+    <nav id="menu" class="menu hidden">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#reservation">Reservation Request</a></li>
+        </ul>
+    </nav>
     <h2>Welcome</h2>
     
     <header class="w3-container w3-center" style="padding:128px 16px" id="home">

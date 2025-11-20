@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
     margin-top: 10%;
     position: relative;
+    cursor: pointer;
 }
 
 .wrapper:hover .middle {
@@ -70,4 +71,47 @@ h2 {
 header h1,
 header p {
     color: white;
+}
+
+.menu {
+    background-color: rgba(116, 129, 108, 0.95);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.menu.hidden {
+    display: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu ul li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 18px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.menu ul li a:hover {
+    color: #B6C5AC;
+    transform: scale(1.05);
 }

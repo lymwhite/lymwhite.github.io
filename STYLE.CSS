@@ -116,6 +116,15 @@ header p {
     transform: scale(1.05);
 }
 
+/* Artist Package Title Styling */
+.artist-package-title {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: white;
+    font-family: 'helvetica neue', sans-serif;
+}
+
 /* Package Grid Layout */
 .package-grid {
     display: grid;

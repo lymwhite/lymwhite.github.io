@@ -402,7 +402,7 @@ h2 {
         margin: 40px auto;
     }
     
-    .portfolio-set {
+    .portfolio-set.active {
         grid-template-columns: 1fr;
     }
     

@@ -8,6 +8,120 @@ body {
     font-family: 'helvetica neue', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background: -webkit-radial-gradient(#B6C5AC, #74816C);
+    background: radial-gradient(#B6C5AC, #74816C);
+}
+
+/* Toolbar Navigation Styles */
+.wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.wrapper:hover .middle {
+    width: 50px;
+    height: 50px;
+    top: 24%;
+    left: 27%;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.3;
+}
+
+.wrapper:hover .top {
+    -webkit-transform: rotate(45deg);
+    top: 40%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.wrapper:hover .bottom {
+    -webkit-transform: rotate(-45deg);
+    top: 40%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.bar {
+    width: 80px;
+    height: 10px;
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.top {
+    left: 15%;
+    top: 20%;
+    -webkit-transition: all 0.5s;
+}
+
+.middle {
+    left: 15%;
+    top: 40%;
+    -webkit-transition: all 0.5s;
+}
+
+.bottom {
+    left: 15%;
+    top: 60%;
+    -webkit-transition: all 0.5s;
+}
+
+.menu {
+    background-color: rgba(116, 129, 108, 0.95);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.menu.hidden {
+    display: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu ul li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 18px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.menu ul li a:hover {
+    color: #B6C5AC;
+    transform: scale(1.05);
 }
 
 /* Full-page sections */
@@ -17,8 +131,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: -webkit-radial-gradient(#B6C5AC, #74816C);
-    background: radial-gradient(#B6C5AC, #74816C);
 }
 
 /* Home Section Styles */

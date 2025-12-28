@@ -136,6 +136,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: filter 0.3s ease;
+}
+
+.page-section.blurred {
+    filter: blur(5px);
 }
 
 /* Home Section Styles */

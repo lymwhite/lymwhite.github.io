@@ -1,15 +1,29 @@
-body {
-	background: -webkit-radial-gradient(#B6C5AC, #74816C);
-	background: radial-gradient(#B6C5AC, #74816C);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'helvetica neue', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: -webkit-radial-gradient(#B6C5AC, #74816C);
+    background: radial-gradient(#B6C5AC, #74816C);
+}
+
+/* Toolbar Navigation Styles */
 .wrapper {
     width: 120px;
     height: 120px;
     margin: 0 auto;
-    margin-top: 10%;
-    position: relative;
+    padding-top: 20px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
+    z-index: 1000;
 }
 
 .wrapper:hover .middle {
@@ -23,14 +37,16 @@ body {
 }
 
 .wrapper:hover .top {
-    -webkit-transform:rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     top: 40%;
     border-radius: 10px;
     background-color: white;
 }
 
 .wrapper:hover .bottom {
-    -webkit-transform:rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     top: 40%;
     border-radius: 10px;
     background-color: white;
@@ -48,29 +64,21 @@ body {
     left: 15%;
     top: 20%;
     -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .middle {
     left: 15%;
     top: 40%;
     -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .bottom {
     left: 15%;
     top: 60%;
     -webkit-transition: all 0.5s;
-}
-
-h2 {
-    font-family: 'helvetica neue';
-    color: white;
-    text-align: center;
-}
-
-header h1,
-header p {
-    color: white;
+    transition: all 0.5s;
 }
 
 .menu {
@@ -80,6 +88,11 @@ header p {
     margin: 20px auto;
     max-width: 300px;
     transition: all 0.3s ease;
+    position: fixed;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 
 .menu.hidden {
@@ -116,6 +129,86 @@ header p {
     transform: scale(1.05);
 }
 
+/* Full-page sections */
+.page-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.3s ease;
+}
+
+.page-section.blurred {
+    filter: blur(5px);
+}
+
+/* Home Section Styles */
+#home {
+    position: relative;
+}
+
+.home-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.brand-title {
+    font-size: 72px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.brand-tagline {
+    font-size: 24px;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 40px;
+    animation: bounce 2s infinite;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 30px solid white;
+    margin: 0 auto;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Packages Section Styles */
+#packages {
+    padding: 40px 20px;
+}
+
+.packages-content {
+    width: 100%;
+    max-width: 1400px;
+}
+
 /* Artist Package Title Styling */
 .artist-package-title {
     color: white;
@@ -123,6 +216,9 @@ header p {
     text-decoration: underline;
     text-decoration-color: white;
     font-family: 'helvetica neue', sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
 }
 
 /* Package Grid Layout */
@@ -227,5 +323,27 @@ header p {
 @media (max-width: 768px) {
     .package-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .brand-title {
+        font-size: 48px;
+    }
+    
+    .brand-tagline {
+        font-size: 18px;
+    }
+    
+    .artist-package-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-title {
+        font-size: 36px;
+    }
+    
+    .brand-tagline {
+        font-size: 16px;
     }
 }

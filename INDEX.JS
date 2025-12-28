@@ -4,16 +4,20 @@ function toggleMenu() {
     menu.classList.toggle('hidden');
 }
 
+// Close menu helper function
+function closeMenu() {
+    const menu = document.getElementById('menu');
+    if (menu && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+    }
+}
+
 // Smooth scroll to section
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
-        // Close menu if open
-        const menu = document.getElementById('menu');
-        if (menu && !menu.classList.contains('hidden')) {
-            menu.classList.add('hidden');
-        }
+        closeMenu();
     }
 }
 
@@ -25,11 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
-                // Close menu after navigation
-                const menu = document.getElementById('menu');
-                if (menu && !menu.classList.contains('hidden')) {
-                    menu.classList.add('hidden');
-                }
+                closeMenu();
             }
         });
     });

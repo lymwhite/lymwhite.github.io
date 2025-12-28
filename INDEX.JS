@@ -5,7 +5,7 @@ function toggleMenu() {
 
 function showPortfolio(portfolioNumber) {
     // Validate input
-    if (!portfolioNumber || portfolioNumber < 1 || portfolioNumber > 5) {
+    if (!portfolioNumber || isNaN(portfolioNumber) || portfolioNumber < 1 || portfolioNumber > 5) {
         return;
     }
     

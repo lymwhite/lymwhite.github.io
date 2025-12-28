@@ -218,12 +218,12 @@ h2 {
 
 .portfolio-set {
     display: none;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
 }
 
 .portfolio-set.active {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .portfolio-item {

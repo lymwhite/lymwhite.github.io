@@ -4,6 +4,11 @@ function toggleMenu() {
 }
 
 function showPortfolio(portfolioNumber) {
+    // Validate input
+    if (!portfolioNumber || portfolioNumber < 1 || portfolioNumber > 5) {
+        return;
+    }
+    
     // Remove active class from all circles
     const circles = document.querySelectorAll('.nav-circle');
     circles.forEach(circle => {
@@ -36,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navCircles = document.querySelectorAll('.nav-circle');
     navCircles.forEach(circle => {
         circle.addEventListener('click', function() {
-            const portfolioNumber = parseInt(this.getAttribute('data-portfolio'));
+            const portfolioNumber = parseInt(this.getAttribute('data-portfolio'), 10);
             showPortfolio(portfolioNumber);
         });
     });

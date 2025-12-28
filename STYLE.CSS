@@ -164,11 +164,16 @@ h2 {
 
 /* Artist Package Title Styling */
 .artist-package-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
     color: white;
+    letter-spacing: 8px;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     text-decoration: underline;
     text-decoration-color: white;
-    font-family: 'Helvetica Neue', sans-serif;
+    margin: 40px 0 20px 0;
 }
 
 /* Package Grid Layout */
@@ -282,6 +287,11 @@ h2 {
     
     .brand-tagline {
         font-size: 18px;
+    }
+    
+    .artist-package-title {
+        font-size: 28px;
+        letter-spacing: 4px;
     }
     
     .homepage-container {

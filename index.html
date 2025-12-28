@@ -5,90 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Me Warm</title>
     <link rel="stylesheet" href="STYLE.CSS">
-    <script src="INDEX.JS"></script>
+    <script src="INDEX.JS" defer></script>
 </head>
 <body>
-    <div class="wrapper" onclick="toggleMenu()">
-        <div class="bar top"></div>
-        <div class="bar middle"></div>
-        <div class="bar bottom"></div>
-    </div>
-    <nav id="menu" class="menu hidden">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#collections">Collections</a></li>
-            <li><a href="#reservation">Package Request</a></li>
-        </ul>
-    </nav>
-    <h2>Welcome</h2>
-    
-    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-        <h1 class="w3-jumbo"><b>Color me warm.</b></h1>
-        <p>Take Care of Your Mind and Spirit 
-            with the Stroke of a Brush.</p>
-    </header>
+    <!-- Home Section -->
+    <section id="home" class="page-section">
+        <div class="home-content">
+            <h1 class="brand-title">Color Me Warm</h1>
+            <p class="brand-tagline">Take Care of Your Mind and Spirit with the Stroke of a Brush.</p>
+            <div class="scroll-arrow" onclick="scrollToSection('packages')">
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages Section -->
+    <section id="packages" class="page-section">
+        <div class="packages-content">
+            <h2 class="artist-package-title">Artist Package Options</h2>
+            <div class="package-grid">
+                <!-- Package 1: Individual -->
+                <div class="package-card">
+                    <div class="package-header">Individual</div>
+                    <div class="package-details">
+                        <ul>
+                            <li>Personalized Instruction</li>
+                            <li>In-Session Supplies</li>
+                            <li>Art Basics Introduction</li>
+                            <li>You Keep Your Artwork</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <h2>$ 44</h2>
+                        <span class="price-label">per session</span>
+                        <button class="book-button">Book Today</button>
+                    </div>
+                </div>
+                
+                <!-- Package 2: Group (2-3) -->
+                <div class="package-card">
+                    <div class="package-header">Group (2 - 3)</div>
+                    <div class="package-details">
+                        <ul>
+                            <li>Personalized Instruction</li>
+                            <li>In-Session Supplies</li>
+                            <li>Art Basics Introduction</li>
+                            <li>You Keep Your Painting</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <h2>$ 68</h2>
+                        <span class="price-label">per session</span>
+                        <button class="book-button">Book Today</button>
+                    </div>
+                </div>
+                
+                <!-- Package 3: Group (4-5) -->
+                <div class="package-card">
+                    <div class="package-header">Group (4 - 5)</div>
+                    <div class="package-details">
+                        <ul>
+                            <li>Personalized Instruction</li>
+                            <li>In-Session Supplies</li>
+                            <li>Art Basics Introduction</li>
+                            <li>You Keep Your Painting</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <h2>$ 116</h2>
+                        <span class="price-label">per session</span>
+                        <button class="book-button">Book Today</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html>
- <h3 class="w3-padding-16 artist-package-title" id="reservation">Artist Package Options</h3>
-    <div class="package-grid">
-      <!-- Package 1: Individual -->
-      <div class="package-card">
-        <div class="package-header">Individual</div>
-        <div class="package-details">
-          <ul>
-            <li>Personalized Instruction</li>
-            <li>In-Session Supplies</li>
-            <li>Art Basics Introduction</li>
-            <li>You Keep Your Artwork</li>
-          </ul>
-        </div>
-        <div class="package-footer">
-          <h2>$ 44</h2>
-          <span class="price-label">per session</span>
-          <button class="book-button">Book Today</button>
-        </div>
-      </div>
-      
-      <!-- Package 2: Group (2-3) -->
-      <div class="package-card">
-        <div class="package-header">Group (2 - 3)</div>
-        <div class="package-details">
-          <ul>
-            <li>Personalized Instruction</li>
-            <li>In-Session Supplies</li>
-            <li>Art Basics Introduction</li>
-            <li>You Keep Your Painting</li>
-          </ul>
-        </div>
-        <div class="package-footer">
-          <h2>$ 68</h2>
-          <span class="price-label">per session</span>
-          <button class="book-button">Book Today</button>
-        </div>
-      </div>
-      
-      <!-- Package 3: Group (4-5) -->
-      <div class="package-card">
-        <div class="package-header">Group (4 - 5)</div>
-        <div class="package-details">
-          <ul>
-            <li>Personalized Instruction</li>
-            <li>In-Session Supplies</li>
-            <li>Art Basics Introduction</li>
-            <li>You Keep Your Painting</li>
-          </ul>
-        </div>
-        <div class="package-footer">
-          <h2>$ 116</h2>
-          <span class="price-label">per session</span>
-          <button class="book-button">Book Today</button>
-        </div>
-      </div>
-    </div>
 </html>

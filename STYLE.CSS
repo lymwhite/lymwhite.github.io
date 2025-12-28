@@ -1,119 +1,90 @@
-body {
-	background: -webkit-radial-gradient(#B6C5AC, #74816C);
-	background: radial-gradient(#B6C5AC, #74816C);
-}
-
-.wrapper {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
-    margin-top: 10%;
-    position: relative;
-    cursor: pointer;
-}
-
-.wrapper:hover .middle {
-    width: 50px;
-    height: 50px;
-    top: 24%;
-    left: 27%;
-    border-radius: 50%;
-    background-color: white;
-    opacity: 0.3;
-}
-
-.wrapper:hover .top {
-    -webkit-transform:rotate(45deg);
-    top: 40%;
-    border-radius: 10px;
-    background-color: white;
-}
-
-.wrapper:hover .bottom {
-    -webkit-transform:rotate(-45deg);
-    top: 40%;
-    border-radius: 10px;
-    background-color: white;
-}
-
-.bar {
-    width: 80px;
-    height: 10px;
-    border: 2px solid white;
-    position: absolute;
-    border-radius: 10px;
-}
-
-.top {
-    left: 15%;
-    top: 20%;
-    -webkit-transition: all 0.5s;
-}
-
-.middle {
-    left: 15%;
-    top: 40%;
-    -webkit-transition: all 0.5s;
-}
-
-.bottom {
-    left: 15%;
-    top: 60%;
-    -webkit-transition: all 0.5s;
-}
-
-h2 {
-    font-family: 'helvetica neue';
-    color: white;
-    text-align: center;
-}
-
-header h1,
-header p {
-    color: white;
-}
-
-.menu {
-    background-color: rgba(116, 129, 108, 0.95);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 300px;
-    transition: all 0.3s ease;
-}
-
-.menu.hidden {
-    display: none;
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.menu ul li {
-    padding: 15px 0;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.menu ul li:last-child {
-    border-bottom: none;
-}
-
-.menu ul li a {
-    color: white;
-    text-decoration: none;
+body {
     font-family: 'helvetica neue', sans-serif;
-    font-size: 18px;
-    display: block;
-    transition: all 0.2s ease;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-.menu ul li a:hover {
-    color: #B6C5AC;
-    transform: scale(1.05);
+/* Full-page sections */
+.page-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-radial-gradient(#B6C5AC, #74816C);
+    background: radial-gradient(#B6C5AC, #74816C);
+}
+
+/* Home Section Styles */
+#home {
+    position: relative;
+}
+
+.home-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.brand-title {
+    font-size: 72px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.brand-tagline {
+    font-size: 24px;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 40px;
+    animation: bounce 2s infinite;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 30px solid white;
+    margin: 0 auto;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Packages Section Styles */
+#packages {
+    padding: 40px 20px;
+}
+
+.packages-content {
+    width: 100%;
+    max-width: 1400px;
 }
 
 /* Artist Package Title Styling */
@@ -123,6 +94,9 @@ header p {
     text-decoration: underline;
     text-decoration-color: white;
     font-family: 'helvetica neue', sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
 }
 
 /* Package Grid Layout */
@@ -227,5 +201,27 @@ header p {
 @media (max-width: 768px) {
     .package-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .brand-title {
+        font-size: 48px;
+    }
+    
+    .brand-tagline {
+        font-size: 18px;
+    }
+    
+    .artist-package-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-title {
+        font-size: 36px;
+    }
+    
+    .brand-tagline {
+        font-size: 16px;
     }
 }

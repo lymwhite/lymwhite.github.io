@@ -162,6 +162,98 @@ h2 {
     transform: scale(1.05);
 }
 
+/* Portfolio Section */
+.portfolio-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.portfolio-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 8px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 0 40px 0;
+}
+
+/* Navigation Circles */
+.portfolio-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.nav-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.nav-circle:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+.nav-circle.active {
+    background-color: white;
+    border-color: #74816C;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    position: relative;
+    min-height: 500px;
+}
+
+.portfolio-set {
+    display: none;
+}
+
+.portfolio-set.active {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.portfolio-item {
+    text-align: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    color: #74816C;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-subtitle {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 /* Artist Package Title Styling */
 .artist-package-title {
     font-family: 'Helvetica Neue', sans-serif;
@@ -292,6 +384,11 @@ h2 {
         letter-spacing: 4px;
     }
     
+    .portfolio-title {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+    
     .homepage-container {
         padding: 40px 20px;
     }
@@ -299,5 +396,22 @@ h2 {
     .logo-space {
         min-height: 100px;
         margin: 20px auto 10px;
+    }
+    
+    .portfolio-section {
+        margin: 40px auto;
+    }
+    
+    .portfolio-set.active {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-circle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .portfolio-navigation {
+        gap: 15px;
     }
 }

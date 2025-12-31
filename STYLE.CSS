@@ -226,6 +226,19 @@ h2 {
     gap: 30px;
 }
 
+/* Collection Title Styling */
+.collection-title {
+    grid-column: 1 / -1;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0 0 20px 0;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .portfolio-item {
     text-align: center;
 }
@@ -413,5 +426,10 @@ h2 {
     
     .portfolio-navigation {
         gap: 15px;
+    }
+    
+    .collection-title {
+        font-size: 24px;
+        letter-spacing: 2px;
     }
 }

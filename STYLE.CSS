@@ -245,7 +245,7 @@ h2 {
 
 .image-placeholder {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/5;
     background-color: rgba(255, 255, 255, 0.9);
     border: 3px solid white;
     border-radius: 8px;
@@ -255,6 +255,16 @@ h2 {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 24px;
     color: #74816C;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-image {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 8px;
     margin-bottom: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

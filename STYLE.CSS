@@ -389,6 +389,73 @@ h2 {
     color: white;
 }
 
+/* Contact Section */
+.contact-section {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 8px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 0 40px 0;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-photo-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 8px;
+}
+
+.contact-name {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.contact-job-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    font-weight: 300;
+}
+
+.contact-email {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.contact-email:hover {
+    opacity: 0.8;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .package-grid {
@@ -443,5 +510,15 @@ h2 {
     .collection-title {
         font-size: 24px;
         letter-spacing: 2px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .contact-photo-circle {
+        width: 120px;
+        height: 120px;
     }
 }
